@@ -1,0 +1,16 @@
+INSTRUCTIONS POUR LES IMAGES MANQUANTES
+
+Pour que le site fonctionne correctement, vous devez ajouter les images suivantes dans le dossier "images/" :
+
+1. images/logo.jpg - Le logo de la mosquée, visible dans l'en-tête du site
+   URL: https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-1/309383581_163177426370397_1218301960546730872_n.jpg
+
+2. images/mosque-hero.jpg - Une grande image de la mosquée pour l'arrière-plan de la section d'accueil
+   URL: https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/473572103_620471997307602_3090063881213245370_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=cN9cHMmJDoIQ7kNvwF51Ybo&_nc_oc=Adn4wWljR3jwYua70Z0qEsxCzpIG3ARkwnf0gKg9mC-i2fXhe06K6r-my_UL47T8T64&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=kMHg0DJ4lMEJxJ65sUgIJg&oh=00_AfHER_RW-aYHaBaNnA3HoQmaXNBblZarrPqCiwqddEjWAQ&oe=67F85CA1
+
+3. images/mosque-placeholder.jpg - Une image pour la section de présentation
+   URL: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1FLOK3KtqlHWN3uf8G-K2DZtsARLTtc9BPw&s
+
+Vous pouvez télécharger ces images à partir des URL fournies et les placer dans le dossier "images/" avec les noms indiqués ci-dessus.
+
+Note: Si vous ne pouvez pas télécharger les images via curl, utilisez un navigateur web pour visiter les URL et enregistrer les images manuellement dans le dossier "images/". 

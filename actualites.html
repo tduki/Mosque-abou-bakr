@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - Mosquée Abou Bakr</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo Mosquée Abou Bakr" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Mosquée Abou Bakr</h1>
+                        <p>Mailloles</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#presentation">Présentation</a></li>
+                    <li><a href="index.html#activites">Activités</a></li>
+                    <li><a href="index.html#actualites">Actualités</a></li>
+                    <li><a href="index.html#benevolat">Engagement</a></li>
+                    <li><a href="index.html#horaires">Horaires des prières</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Actualités de la mosquée</h1>
+            <p>Restez informés des dernières nouvelles et événements de la Mosquée Abou Bakr</p>
+        </div>
+    </div>
+
+    <section class="news-page">
+        <div class="container">
+            <div class="news-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="event">Événements</button>
+                <button class="filter-btn" data-filter="course">Cours</button>
+                <button class="filter-btn" data-filter="announcement">Annonces</button>
+            </div>
+            
+            <div class="news-list" id="news-list">
+                <!-- Les articles seront chargés dynamiquement ici -->
+                <article class="news-item" data-category="event">
+                    <div class="news-item-image">
+                        <img src="images/aid el fitr 2024.jpg" alt="Aïd el Fitr 2024">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Célébration de l'Aïd al-Fitr 2024</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 10 Avril 2024</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Événement</span>
+                        </div>
+                        <p>Nous sommes heureux de vous annoncer que la prière de l'Aïd al-Fitr aura lieu le mercredi 10 avril 2024 à 8h30 à la mosquée. Venez nombreux partager ce moment de joie et de fraternité.</p>
+                        <p>La prière sera suivie d'un petit-déjeuner convivial avec thé, café et gâteaux. Une distribution de bonbons sera organisée pour les enfants.</p>
+                        <p>N'oubliez pas d'apporter votre tapis de prière impérativement. Un espace aménagé est prévu pour les femmes et les enfants, et une partie pour les hommes.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="announcement">
+                    <div class="news-item-image">
+                        <img src="images/addan.jpg" alt="Adhan à la mosquée">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>L'appel à la prière dans notre mosquée</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 5 Avril 2024</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Annonce</span>
+                        </div>
+                        <p>La mosquée Abou Bakr respecte les traditions de l'adhan (appel à la prière) avant chaque prière quotidienne. Nous tenons à rappeler à tous les fidèles l'importance de cet appel qui rassemble notre communauté.</p>
+                        <p>Notre muezzin récite l'adhan à l'intérieur de la mosquée, invitant les fidèles à se rassembler pour la prière en commun, comme illustré sur cette photo prise dans notre minbar.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="event">
+                    <div class="news-item-image">
+                        <img src="images/conference.jpg" alt="Conférence à la mosquée">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Conférences spirituelles de décembre</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 24 Décembre 2023</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Événement</span>
+                        </div>
+                        <p>Nous vous invitons à deux conférences spirituelles exceptionnelles :</p>
+                        <p><strong>Dimanche 24 décembre</strong> - Après l'Isha, conférence sur le thème : « Ainsi se comportait le Prophète ﷺ avec les jeunes » par le professeur Farid MOUNIR, suivie d'une assise réservée pour les 18-25 ans.</p>
+                        <p><strong>Lundi 25 décembre</strong> - Après la prière de l'Asr (15h), conférence sur le thème : « Le mérite d'implorer le pardon d'Allah ».</p>
+                        <p>Ces événements sont ouverts à toutes et à tous, venez nombreux !</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="event">
+                    <div class="news-item-image">
+                        <img src="images/aid-2025-ramadan.jpg" alt="Célébration de l'Aïd">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Célébration de l'Aïd al-Fitr 2025</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 15 Avril 2025</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Événement</span>
+                        </div>
+                        <p>Nous sommes heureux de vous annoncer que la prière de l'Aïd al-Fitr aura lieu le mercredi 15 avril 2025 à 8h30 à la mosquée. Venez nombreux partager ce moment de joie et de fraternité.</p>
+                        <p>La prière sera suivie d'un petit-déjeuner communautaire dans la salle polyvalente. Tous les fidèles sont invités à apporter des pâtisseries ou des boissons à partager.</p>
+                        <p>Nous rappelons également que la zakat al-fitr peut être versée à la mosquée jusqu'à la veille de l'Aïd.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="course">
+                    <div class="news-item-image">
+                        <img src="images/cours d'arabe.jpg" alt="Cours de Coran">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Nouveaux cours de Coran pour les enfants</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 10 Mars 2025</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Cours</span>
+                        </div>
+                        <p>À partir du mois de mars, nous ouvrons de nouveaux créneaux pour les cours de Coran destinés aux enfants de 7 à 12 ans. Les séances auront lieu tous les mercredis et samedis après-midi.</p>
+                        <p>Ces cours seront dispensés par notre nouvel imam et permettront aux enfants d'apprendre la récitation du Coran, les règles de tajwid et les fondements de l'islam.</p>
+                        <p>Pour inscrire vos enfants, veuillez vous présenter au secrétariat de la mosquée aux heures d'ouverture ou nous contacter par téléphone.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="event">
+                    <div class="news-item-image">
+                        <img src="images/iftar mailloles.jpg" alt="Iftar communautaire">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Iftar communautaire pendant le Ramadan</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 1 Mars 2025</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Événement</span>
+                        </div>
+                        <p>Pendant tout le mois de Ramadan, nous organiserons des repas de rupture du jeûne (Iftar) communautaires à la mosquée. Ces moments de partage auront lieu tous les vendredis et samedis soir.</p>
+                        <p>Nous invitons tous les fidèles qui le souhaitent à participer à l'organisation de ces repas. Vous pouvez apporter des plats, aider à la mise en place ou au service.</p>
+                        <p>Pour plus d'informations ou pour vous porter volontaire, veuillez contacter le responsable des événements de la mosquée.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="announcement">
+                    <div class="news-item-image">
+                        <img src="images/image de la mosque.jpg" alt="Mosquée">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Collecte de dons pour l'agrandissement de la mosquée</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Annonce</span>
+                        </div>
+                        <p>Chers fidèles, nous lançons une campagne de collecte de fonds pour financer les travaux d'agrandissement de notre mosquée. Ces travaux permettront d'accueillir plus de fidèles dans de meilleures conditions, notamment pendant les prières du vendredi et les grandes fêtes.</p>
+                        <p>Vous pouvez faire vos dons directement à la mosquée ou par virement bancaire. Chaque contribution, quelle que soit son montant, est importante et appréciée.</p>
+                        <p>Un tableau d'affichage à l'entrée de la mosquée vous tiendra informés de l'avancement de la collecte et des travaux.</p>
+                    </div>
+                </article>
+                
+                <article class="news-item" data-category="course">
+                    <div class="news-item-image">
+                        <img src="images/cours d'arabe.jpg" alt="Cours d'arabe">
+                    </div>
+                    <div class="news-item-content">
+                        <h2>Reprise des cours d'arabe pour adultes</h2>
+                        <div class="news-item-meta">
+                            <span class="news-date"><i class="far fa-calendar-alt"></i> 5 Février 2025</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Cours</span>
+                        </div>
+                        <p>Les cours d'arabe pour adultes reprendront le lundi 10 février 2025. Deux niveaux seront proposés : débutant et intermédiaire.</p>
+                        <p>Les cours auront lieu deux fois par semaine, le lundi et le mercredi soir, de 19h00 à 20h30. Ils seront dispensés par Frère Abdullah, qui possède une grande expérience dans l'enseignement de la langue arabe.</p>
+                        <p>Les inscriptions sont ouvertes dès maintenant. Le nombre de places étant limité, nous vous conseillons de vous inscrire rapidement.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Mosquée Abou Bakr</h3>
+                    <p>Mailloles</p>
+                    <div class="social-media footer-social">
+                        <a href="https://www.facebook.com/p/Mosqu%C3%A9e-Mailloles-Abou-Bakr-100080344225648/?locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html#accueil">Accueil</a></li>
+                        <li><a href="index.html#presentation">Présentation</a></li>
+                        <li><a href="index.html#activites">Activités</a></li>
+                        <li><a href="index.html#actualites">Actualités</a></li>
+                        <li><a href="index.html#benevolat">Engagement</a></li>
+                        <li><a href="index.html#horaires">Horaires des prières</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mosquée Abou Bakr - Mailloles. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

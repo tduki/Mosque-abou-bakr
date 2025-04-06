@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Mosquée Abou Bakr</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <div class="admin-login" id="login-form">
+            <div class="admin-header">
+                <img src="../images/logo.png" alt="Logo Mosquée Abou Bakr" class="admin-logo">
+                <h1>Espace Administration</h1>
+                <p>Connectez-vous pour gérer le contenu du site</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="admin-btn">Se connecter</button>
+                </div>
+                <div class="login-error" id="login-error" style="display: none;">
+                    Identifiants incorrects. Veuillez réessayer.
+                </div>
+            </form>
+        </div>
+        
+        <div class="admin-dashboard" id="admin-dashboard" style="display: none;">
+            <header class="admin-top-bar">
+                <div class="admin-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="admin-top-title">
+                    <h2>Tableau de bord</h2>
+                </div>
+                <div class="admin-user-info">
+                    <span>Administrateur</span>
+                    <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </header>
+            
+            <div class="admin-content">
+                <aside class="admin-sidebar">
+                    <div class="admin-sidebar-header">
+                        <img src="../images/logo.png" alt="Logo Mosquée Abou Bakr" class="admin-sidebar-logo">
+                        <h3>Mosquée Abou Bakr</h3>
+                    </div>
+                    <nav class="admin-nav">
+                        <ul>
+                            <li class="active"><a href="#" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                            <li><a href="#" data-section="news"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                            <li><a href="#" data-section="fundraising"><i class="fas fa-hand-holding-heart"></i> Cagnottes</a></li>
+                            <li><a href="#" data-section="settings"><i class="fas fa-cog"></i> Paramètres</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                
+                <main class="admin-main">
+                    <section id="dashboard-section" class="admin-section active">
+                        <div class="admin-section-title">
+                            <h2>Tableau de bord</h2>
+                            <p>Bienvenue dans l'espace d'administration de la Mosquée Abou Bakr</p>
+                        </div>
+                        
+                        <div class="admin-cards">
+                            <div class="admin-card">
+                                <div class="admin-card-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="admin-card-info">
+                                    <h3>5</h3>
+                                    <p>Articles publiés</p>
+                                </div>
+                            </div>
+                            
+                            <div class="admin-card">
+                                <div class="admin-card-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="admin-card-info">
+                                    <h3>1,234</h3>
+                                    <p>Visites ce mois</p>
+                                </div>
+                            </div>
+                            
+                            <div class="admin-card">
+                                <div class="admin-card-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="admin-card-info">
+                                    <h3>10</h3>
+                                    <p>Messages de contact</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-recent">
+                            <div class="admin-section-subtitle">
+                                <h3>Articles récents</h3>
+                                <a href="#" data-section="news" class="admin-link">Voir tous</a>
+                            </div>
+                            
+                            <div class="admin-table-container">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Titre</th>
+                                            <th>Catégorie</th>
+                                            <th>Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Célébration de l'Aïd al-Fitr 2025</td>
+                                            <td><span class="admin-badge event">Événement</span></td>
+                                            <td>15/04/2025</td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nouveaux cours de Coran pour les enfants</td>
+                                            <td><span class="admin-badge course">Cours</span></td>
+                                            <td>10/03/2025</td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Iftar communautaire pendant le Ramadan</td>
+                                            <td><span class="admin-badge event">Événement</span></td>
+                                            <td>01/03/2025</td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="news-section" class="admin-section">
+                        <div class="admin-section-title">
+                            <h2>Gestion des actualités</h2>
+                            <button class="admin-btn" id="add-news-btn"><i class="fas fa-plus"></i> Ajouter un article</button>
+                        </div>
+                        
+                        <div class="admin-news-list">
+                            <div class="admin-table-container">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Titre</th>
+                                            <th>Catégorie</th>
+                                            <th>Date</th>
+                                            <th>Statut</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Célébration de l'Aïd al-Fitr 2025</td>
+                                            <td><span class="admin-badge event">Événement</span></td>
+                                            <td>15/04/2025</td>
+                                            <td><span class="admin-badge status-published">Publié</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-news" data-id="1" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-news" data-id="1" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nouveaux cours de Coran pour les enfants</td>
+                                            <td><span class="admin-badge course">Cours</span></td>
+                                            <td>10/03/2025</td>
+                                            <td><span class="admin-badge status-published">Publié</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-news" data-id="2" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-news" data-id="2" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Iftar communautaire pendant le Ramadan</td>
+                                            <td><span class="admin-badge event">Événement</span></td>
+                                            <td>01/03/2025</td>
+                                            <td><span class="admin-badge status-published">Publié</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-news" data-id="3" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-news" data-id="3" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Collecte de dons pour l'agrandissement de la mosquée</td>
+                                            <td><span class="admin-badge announcement">Annonce</span></td>
+                                            <td>15/02/2025</td>
+                                            <td><span class="admin-badge status-published">Publié</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-news" data-id="4" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-news" data-id="4" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reprise des cours d'arabe pour adultes</td>
+                                            <td><span class="admin-badge course">Cours</span></td>
+                                            <td>05/02/2025</td>
+                                            <td><span class="admin-badge status-published">Publié</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-news" data-id="5" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-news" data-id="5" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="add-news-section" class="admin-section">
+                        <div class="admin-section-title">
+                            <h2>Ajouter un nouvel article</h2>
+                            <button class="admin-btn secondary" id="back-to-news-btn"><i class="fas fa-arrow-left"></i> Retour</button>
+                        </div>
+                        
+                        <form id="news-form" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="news-title">Titre de l'article*</label>
+                                    <input type="text" id="news-title" name="title" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="news-category">Catégorie*</label>
+                                    <select id="news-category" name="category" required>
+                                        <option value="">Sélectionner une catégorie</option>
+                                        <option value="event">Événement</option>
+                                        <option value="course">Cours</option>
+                                        <option value="announcement">Annonce</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="news-date">Date de publication*</label>
+                                    <input type="date" id="news-date" name="date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="news-status">Statut</label>
+                                    <select id="news-status" name="status">
+                                        <option value="published">Publié</option>
+                                        <option value="draft">Brouillon</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="news-image">Image de couverture*</label>
+                                <div class="image-upload-container">
+                                    <div class="image-preview" id="image-preview">
+                                        <i class="fas fa-image"></i>
+                                        <p>Aperçu de l'image</p>
+                                    </div>
+                                    <div class="image-upload">
+                                        <input type="file" id="news-image" name="image" accept="image/*" required>
+                                        <label for="news-image" class="image-upload-label"><i class="fas fa-upload"></i> Choisir une image</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="news-content">Contenu de l'article*</label>
+                                <textarea id="news-content" name="content" rows="10" required></textarea>
+                            </div>
+                            
+                            <div class="form-group form-actions">
+                                <button type="button" class="admin-btn secondary" id="cancel-news-btn">Annuler</button>
+                                <button type="submit" class="admin-btn">Publier l'article</button>
+                            </div>
+                        </form>
+                    </section>
+                    
+                    <section id="fundraising-section" class="admin-section">
+                        <div class="admin-section-title">
+                            <h2>Gestion des cagnottes</h2>
+                            <button class="admin-btn" id="add-fundraising-btn"><i class="fas fa-plus"></i> Ajouter une cagnotte</button>
+                        </div>
+                        
+                        <div class="admin-fundraising-list">
+                            <div class="admin-table-container">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom du projet</th>
+                                            <th>Objectif</th>
+                                            <th>Montant collecté</th>
+                                            <th>Pourcentage</th>
+                                            <th>Statut</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Agrandissement de la salle de prière</td>
+                                            <td>50 000 €</td>
+                                            <td>32 500 €</td>
+                                            <td><div class="admin-progress"><div class="admin-progress-fill" style="width: 65%;"></div><span>65%</span></div></td>
+                                            <td><span class="admin-badge status-published">Actif</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-fundraising" data-id="1" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-fundraising" data-id="1" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rénovation des salles de cours</td>
+                                            <td>15 000 €</td>
+                                            <td>6 000 €</td>
+                                            <td><div class="admin-progress"><div class="admin-progress-fill" style="width: 40%;"></div><span>40%</span></div></td>
+                                            <td><span class="admin-badge status-published">Actif</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-fundraising" data-id="2" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-fundraising" data-id="2" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Achat de matériel pour cours d'arabe</td>
+                                            <td>5 000 €</td>
+                                            <td>5 000 €</td>
+                                            <td><div class="admin-progress"><div class="admin-progress-fill" style="width: 100%;"></div><span>100%</span></div></td>
+                                            <td><span class="admin-badge status-completed">Terminé</span></td>
+                                            <td>
+                                                <div class="admin-actions">
+                                                    <a href="#" class="edit-fundraising" data-id="3" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                    <a href="#" class="delete-fundraising" data-id="3" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="add-fundraising-section" class="admin-section">
+                        <div class="admin-section-title">
+                            <h2>Ajouter une nouvelle cagnotte</h2>
+                            <button class="admin-btn secondary" id="back-to-fundraising-btn"><i class="fas fa-arrow-left"></i> Retour</button>
+                        </div>
+                        
+                        <form id="fundraising-form" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fundraising-title">Nom du projet*</label>
+                                    <input type="text" id="fundraising-title" name="title" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="fundraising-goal">Objectif financier (€)*</label>
+                                    <input type="number" id="fundraising-goal" name="goal" min="1" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fundraising-collected">Montant collecté (€)*</label>
+                                    <input type="number" id="fundraising-collected" name="collected" min="0" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="fundraising-status">Statut</label>
+                                    <select id="fundraising-status" name="status">
+                                        <option value="active">Actif</option>
+                                        <option value="completed">Terminé</option>
+                                        <option value="paused">En pause</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fundraising-link">Lien de la cagnotte externe</label>
+                                <input type="url" id="fundraising-link" name="link" placeholder="https://www.cotizup.com/votre-cagnotte">
+                                <p class="form-help">Lien vers une plateforme de cagnotte comme CotizUp, Leetchi, etc.</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fundraising-image">Image du projet*</label>
+                                <div class="image-upload-container">
+                                    <div class="image-preview" id="fundraising-image-preview">
+                                        <i class="fas fa-image"></i>
+                                        <p>Aperçu de l'image</p>
+                                    </div>
+                                    <div class="image-upload">
+                                        <input type="file" id="fundraising-image" name="image" accept="image/*" required>
+                                        <label for="fundraising-image" class="image-upload-label"><i class="fas fa-upload"></i> Choisir une image</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fundraising-description">Description du projet*</label>
+                                <textarea id="fundraising-description" name="description" rows="6" required></textarea>
+                            </div>
+                            
+                            <div class="form-group form-actions">
+                                <button type="button" class="admin-btn secondary" id="cancel-fundraising-btn">Annuler</button>
+                                <button type="submit" class="admin-btn">Enregistrer la cagnotte</button>
+                            </div>
+                        </form>
+                    </section>
+                    
+                    <section id="settings-section" class="admin-section">
+                        <div class="admin-section-title">
+                            <h2>Paramètres du site</h2>
+                        </div>
+                        
+                        <form id="settings-form" class="admin-form">
+                            <div class="form-group">
+                                <label for="site-title">Titre du site</label>
+                                <input type="text" id="site-title" name="site-title" value="Mosquée Abou Bakr - Mailloles">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="site-description">Description du site</label>
+                                <textarea id="site-description" name="site-description" rows="3">Un lieu de culte, d'apprentissage et de partage au cœur de Mailloles</textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email de contact</label>
+                                <input type="email" id="contact-email" name="contact-email" value="assoc.assate@gmail.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-phone">Téléphone de contact</label>
+                                <input type="text" id="contact-phone" name="contact-phone" value="XX XX XX XX XX">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="facebook-url">URL Facebook</label>
+                                <input type="url" id="facebook-url" name="facebook-url" value="https://www.facebook.com/p/Mosqu%C3%A9e-Mailloles-Abou-Bakr-100080344225648/?locale=fr_FR">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="instagram-url">URL Instagram</label>
+                                <input type="url" id="instagram-url" name="instagram-url" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="youtube-url">URL YouTube</label>
+                                <input type="url" id="youtube-url" name="youtube-url" value="">
+                            </div>
+                            
+                            <div class="form-group form-actions">
+                                <button type="submit" class="admin-btn">Enregistrer les modifications</button>
+                            </div>
+                        </form>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html> 

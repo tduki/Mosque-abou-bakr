@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosquée Abou Bakr - Mailloles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo Mosquée Abou Bakr" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Mosquée Abou Bakr</h1>
+                        <p>Mailloles</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#activites">Activités</a></li>
+                    <li><a href="#actualites">Actualités</a></li>
+                    <li><a href="#benevolat">Engagement</a></li>
+                    <li><a href="#horaires">Horaires des prières</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-utilities">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h2>Bienvenue à la Mosquée Abou Bakr</h2>
+            <p>Un lieu de culte, d'apprentissage et de partage au cœur de Mailloles</p>
+            <a href="#presentation" class="btn">Découvrir</a>
+        </div>
+    </section>
+
+    <section id="presentation" class="about">
+        <div class="container">
+            <h2>Présentation de l'association</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>La Mosquée Abou Bakr est un lieu de culte musulman situé dans le quartier de Mailloles. Notre association a été fondée avec pour mission de servir la communauté musulmane locale et de promouvoir les valeurs de paix, de respect et de solidarité.</p>
+                    <p>Notre mosquée est ouverte à tous, et nous nous efforçons de créer un environnement accueillant pour les fidèles de tous âges et de toutes origines.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/image de la mosque.jpg" alt="Mosquée Abou Bakr">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activites" class="activities">
+        <div class="container">
+            <h2>Nos activités</h2>
+            <div class="activity-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Cours de Coran</h3>
+                    <p>Apprentissage et récitation du Coran pour tous les âges et tous les niveaux.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Cours religieux</h3>
+                    <p>Enseignements sur les fondements de l'islam, la théologie et la jurisprudence islamique.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Actions caritatives</h3>
+                    <p>Organisation d'événements caritatifs et d'aide aux personnes dans le besoin.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Rencontres communautaires</h3>
+                    <p>Moments de partage et de convivialité entre les membres de la communauté.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="actualites" class="news">
+        <div class="container">
+            <h2>Actualités de la mosquée</h2>
+            
+            <div class="event-calendar-container">
+                <h3>Calendrier des événements à venir</h3>
+                <div class="event-calendar">
+                    <div class="calendar-header">
+                        <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h4 class="current-month">Avril 2024</h4>
+                        <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-weekday">Lun</div>
+                        <div class="calendar-weekday">Mar</div>
+                        <div class="calendar-weekday">Mer</div>
+                        <div class="calendar-weekday">Jeu</div>
+                        <div class="calendar-weekday">Ven</div>
+                        <div class="calendar-weekday">Sam</div>
+                        <div class="calendar-weekday">Dim</div>
+                        <!-- Les dates seront générées dynamiquement -->
+                    </div>
+                    <div class="calendar-actions">
+                        <button class="btn add-event-btn"><i class="fas fa-plus"></i> Ajouter un événement</button>
+                    </div>
+                    <div class="upcoming-events">
+                        <h5>Prochains événements</h5>
+                        <div class="event-list">
+                            <!-- Les événements seront générés dynamiquement -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal pour ajouter un événement -->
+            <div class="event-modal" id="event-modal">
+                <div class="event-modal-content">
+                    <div class="event-modal-header">
+                        <h3>Ajouter un événement</h3>
+                        <button class="close-modal"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="event-modal-body">
+                        <form id="add-event-form">
+                            <div class="form-group">
+                                <label for="event-title">Titre de l'événement</label>
+                                <input type="text" id="event-title" name="title" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-date">Date</label>
+                                <input type="date" id="event-date" name="date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-time">Heure</label>
+                                <input type="time" id="event-time" name="time" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-location">Lieu</label>
+                                <input type="text" id="event-location" name="location" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event-description">Description (optionnel)</label>
+                                <textarea id="event-description" name="description"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-cancel">Annuler</button>
+                                <button type="submit" class="btn">Ajouter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-grid" id="news-container">
+                <!-- Les articles seront chargés dynamiquement ici -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/aid el fitr 2024.jpg" alt="Aïd el Fitr 2024">
+                    </div>
+                    <div class="news-content">
+                        <h3>Célébration de l'Aïd al-Fitr 2024</h3>
+                        <div class="news-date">10 Avril 2024</div>
+                        <p>Nous sommes heureux de vous annoncer que la prière de l'Aïd al-Fitr aura lieu le mercredi 10 avril 2024 à 8h30 à la mosquée. Venez nombreux partager ce moment de joie et de fraternité.</p>
+                        <a href="actualites.html" class="news-read-more">Lire la suite</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/addan.jpg" alt="Adhan à la mosquée">
+                    </div>
+                    <div class="news-content">
+                        <h3>L'appel à la prière dans notre mosquée</h3>
+                        <div class="news-date">5 Avril 2024</div>
+                        <p>La mosquée Abou Bakr respecte les traditions de l'adhan (appel à la prière) avant chaque prière quotidienne. Nous tenons à rappeler à tous les fidèles l'importance de cet appel qui rassemble notre communauté.</p>
+                        <a href="actualites.html" class="news-read-more">Lire la suite</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/conference.jpg" alt="Conférence à la mosquée">
+                    </div>
+                    <div class="news-content">
+                        <h3>Conférences spirituelles de décembre</h3>
+                        <div class="news-date">24 Décembre 2023</div>
+                        <p>Nous vous invitons à deux conférences spirituelles exceptionnelles sur les thèmes : « Ainsi se comportait le Prophète avec les jeunes » et « Le mérite d'implorer le pardon d'Allah ».</p>
+                        <a href="actualites.html" class="news-read-more">Lire la suite</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="view-all-news">
+                <a href="actualites.html" class="btn">Voir toutes les actualités</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="benevolat" class="volunteering">
+        <div class="container">
+            <h2>Engagez-vous avec nous</h2>
+            <div class="volunteering-content">
+                <div class="volunteering-cards">
+                    <div class="volunteering-card">
+                        <div class="volunteering-image">
+                            <img src="images/benevoles.jpg" alt="Bénévolat">
+                        </div>
+                        <div class="volunteering-card-content">
+                            <h3>Devenez bénévole</h3>
+                            <p><strong>Nous avons besoin de vous !</strong> Nous recherchons activement des bénévoles pour nous aider dans nos différentes activités : enseignement, organisation d'événements, entretien de la mosquée, aide administrative...</p>
+                            <p>Que ce soit quelques heures par semaine ou par mois, votre aide est précieuse et essentielle pour le bon fonctionnement de notre mosquée !</p>
+                            <a href="#contact" class="btn btn-donation">
+                                <i class="fas fa-hands-helping"></i> Devenir bénévole
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="volunteering-card">
+                        <div class="volunteering-image">
+                            <img src="images/zakat.png" alt="Faire un don">
+                        </div>
+                        <div class="volunteering-card-content">
+                            <h3>Soutenez-nous financièrement</h3>
+                            <p><strong>Votre générosité fait la différence !</strong> Vos dons nous permettent de financer les travaux d'entretien, les activités éducatives, et l'agrandissement de nos locaux.</p>
+                            <p>Chaque contribution, quelle que soit son montant, est importante et contribue directement au développement de notre communauté.</p>
+                            <div class="donation-btns">
+                                <a href="https://www.cotizup.com/mosqueeaboubakr" target="_blank" class="btn btn-donation">
+                                    <i class="fas fa-hand-holding-heart"></i> Faire un don en ligne
+                                </a>
+                                <a href="#contact" class="btn btn-donation-alt">
+                                    <i class="fas fa-info-circle"></i> Autres méthodes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="current-projects">
+                    <h3>Projets en cours de financement</h3>
+                    <div class="project-cards">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4>Agrandissement de la salle de prière</h4>
+                                <div class="project-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%;"></div>
+                                    </div>
+                                    <span class="progress-text">65% atteints</span>
+                                </div>
+                            </div>
+                            <p>Notre objectif est d'agrandir la salle de prière actuelle pour accueillir plus de fidèles, notamment lors des prières du vendredi et des fêtes religieuses.</p>
+                            <div class="project-goal">
+                                <span><strong>Objectif :</strong> 50 000 €</span>
+                                <span><strong>Collecté :</strong> 32 500 €</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://www.cotizup.com/mosqueeaboubakr" target="_blank" class="btn">
+                                    <i class="fas fa-hand-holding-heart"></i> Contribuer
+                                </a>
+                                <a href="#contact" class="btn btn-volunteer">
+                                    <i class="fas fa-hands-helping"></i> Devenir bénévole
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4>Rénovation des salles de cours</h4>
+                                <div class="project-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%;"></div>
+                                    </div>
+                                    <span class="progress-text">40% atteints</span>
+                                </div>
+                            </div>
+                            <p>Pour améliorer les conditions d'enseignement, nous souhaitons rénover les salles de cours avec un nouveau mobilier et des équipements pédagogiques modernes.</p>
+                            <div class="project-goal">
+                                <span><strong>Objectif :</strong> 15 000 €</span>
+                                <span><strong>Collecté :</strong> 6 000 €</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://www.cotizup.com/mosqueeaboubakr" target="_blank" class="btn">
+                                    <i class="fas fa-hand-holding-heart"></i> Contribuer
+                                </a>
+                                <a href="#contact" class="btn btn-volunteer">
+                                    <i class="fas fa-hands-helping"></i> Devenir bénévole
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-message">
+                        <div class="help-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="help-text">
+                            <h4>Nous avons besoin de votre aide !</h4>
+                            <p>Que ce soit par votre temps ou vos dons, chaque contribution est précieuse pour notre communauté. Ensemble, nous pouvons accomplir de grandes choses !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horaires" class="prayer-times">
+        <div class="container">
+            <h2>Horaires des prières - Synchronisés avec Mawaqit</h2>
+            <div class="prayer-times-widget custom-mawaqit">
+                <div class="mawaqit-header">
+                    <img src="images/logo.png" alt="Logo Mosquée" class="mawaqit-logo">
+                    <h3>Mosquée Abou Bakr (Mailloles) - Perpignan</h3>
+                </div>
+                
+                <div class="mawaqit-disclaimer">
+                    <p><strong>Note:</strong> Les horaires des prières sont synchronisés avec Mawaqit pour plus de précision. Pour consulter les horaires en temps réel, veuillez utiliser le bouton ci-dessous.</p>
+                </div>
+                
+                <a href="https://mawaqit.net/fr/m/100049338" target="_blank" class="btn mawaqit-btn mawaqit-btn-primary">
+                    <i class="fas fa-mosque"></i> Accéder directement à Mawaqit
+                </a>
+                
+                <div class="mawaqit-app">
+                    <p>Téléchargez l'application Mawaqit</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/fr/app/mawaqit/id1492269831" target="_blank" class="app-link">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.mawaqit.app" target="_blank" class="app-link">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="contact-form-container">
+                <h3>Nous contacter</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Adresse: 65 Chemin de Mailloles, 66000 Perpignan, France</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>Téléphone: XX XX XX XX XX</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email: assoc.assate@gmail.com</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/p/Mosqu%C3%A9e-Mailloles-Abou-Bakr-100080344225648/?locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <form id="contact-form" action="https://formspree.io/assoc.assate@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.9528286207354!2d2.8760382761941287!3d42.690889871361665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b0719b2c7197b9%3A0xf64406a6a3e04233!2s65%20Chem.%20de%20Mailloles%2C%2066000%20Perpignan%2C%20France!5e0!3m2!1sfr!2s!4v1712417840292!5m2!1sfr!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Mosquée Abou Bakr</h3>
+                    <p>Mailloles</p>
+                    <div class="social-media footer-social">
+                        <a href="https://www.facebook.com/p/Mosqu%C3%A9e-Mailloles-Abou-Bakr-100080344225648/?locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#activites">Activités</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                        <li><a href="#benevolat">Engagement</a></li>
+                        <li><a href="#horaires">Horaires des prières</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mosquée Abou Bakr - Mailloles. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
