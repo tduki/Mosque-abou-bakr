@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('menu-open');
         });
     });
+    
+    // Fermer le menu mobile quand on clique sur l'overlay (en dehors du menu)
+    document.addEventListener('click', function(event) {
+        if (document.body.classList.contains('menu-open') && 
+            !nav.contains(event.target) && 
+            event.target !== menuToggle && 
+            !menuToggle.contains(event.target)) {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
 
     // Animation d'écriture pour le titre de la page d'accueil en boucle
     const heroTitle = document.querySelector('.hero h2');

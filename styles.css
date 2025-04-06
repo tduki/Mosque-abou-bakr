@@ -112,6 +112,7 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    display: block;
 }
 
 /* Header */
@@ -215,6 +216,7 @@ nav ul li a:hover::after {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -899,6 +901,8 @@ footer {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
         z-index: 1001;
+        padding-top: 80px;
+        overflow-y: auto;
     }
     
     nav.active {
@@ -907,20 +911,46 @@ footer {
     
     nav ul {
         flex-direction: column;
-        padding: 80px 0 0 30px;
+        padding: 0 20px;
     }
     
     nav ul li {
         margin: 15px 0;
+        width: 100%;
+        text-align: left;
+    }
+    
+    nav ul li a {
+        font-size: 18px;
+        padding: 12px 8px;
+        display: block;
+        border-bottom: 1px solid #f0f0f0;
     }
     
     .menu-toggle {
         display: block;
         z-index: 1002;
+        font-size: 28px;
     }
     
     .menu-toggle.active {
         color: var(--primary-color);
+    }
+    
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    .hero {
+        background-attachment: scroll;
+        background-position: center center;
     }
     
     .hero h2 {
@@ -933,6 +963,67 @@ footer {
     
     section {
         padding: 60px 0;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .news-image {
+        height: 180px;
+    }
+    
+    .news-card {
+        max-width: 100%;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-image img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .activity-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .volunteering-card {
+        display: block;
+    }
+    
+    .volunteering-image {
+        max-height: 200px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    
+    .project-card {
+        padding: 15px;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    .contact-form-container {
+        padding: 20px 15px;
+    }
+    
+    nav ul li a {
+        font-size: 18px;
+        padding: 8px 0;
+        display: block;
+    }
+    
+    .prayer-times-widget {
+        padding: 20px 15px;
     }
 }
 
@@ -951,6 +1042,27 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+    }
+    
+    .news-image {
+        height: 160px;
+    }
+    
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 18px;
+    }
+    
+    .logo p {
+        font-size: 12px;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 }
 
